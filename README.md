@@ -55,5 +55,5 @@ Firebase
 - Profile Image can be updated
 
 REFERENCE
-If deadline comes and you still don't know how to implement it <br />
+If deadline comes and we have to rush <br />
 https://www.youtube.com/watch?v=B-kxUMHBxNo&ab_channel=CleverProgrammer

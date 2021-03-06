@@ -1,0 +1,95 @@
+1. Khái niệm + mô hình
+https://topdev.vn/blog/agile-la-gi-scrum-la-gi/
+
+2. Liệt kê khái niệm chính:
+- Sprint: = 1 kỳ làm việc (vài tuần ~ vài tháng). 1 project từ lúc bắt đầu đến kết thúc thường có nhiều sprint,
+  Ví dụ 1 project = 4 sprints
+    > làm bản chạy thử
+    > làm bản chạy thật với cụm tính năng 1
+    > làm bản chạy thật cụm tính năng 2
+    > giải quyết việc tồn sprint trước, làm bản chạy thật cụm tính năng 3
+** quản lí tốt 1 sprint là mấu chốt áp dụng tốt scrum
+** so sánh quy trình làm việc cũ:
+  Ví dụ waterfall: 1 project = 1 vòng đời (nhận yêu cầu > thiết kế > làm tài liệu > kiểm thử > phát hành)
+  Còn vs scrum các công việc có thể sẽ lặp lại ở tất cả các sprint >> linh hoạt (agile) hơn khi muốn có thay đổi
+- Backlog: bể công việc cần làm
+- Product backlog: bể công việc cần làm cho cả sản phẩm (cả dự án)
+- Sprint backlog: bể công việc cho 1 sprint
+- Sprint planning: lên kế hoạch đầu sprint
+  Output: Sprint backlog, cách làm là nhặt việc từ Product backlog + Sprint backlog sprint trước còn chưa xong
+- Tasks list: danh sách các task cần thực hiện để hoàn thành công việc trong backlog
+- Task: 1 đơn vị công việc, nên nhỏ để dễ quản lí/kiểm tra, yêu cầu đầu vào + output đầu ra rõ ràng
+**1 công việc trong backlog = n tasks
+**Thời gian hoàn thành 1 task nên từ vài phút đến < 4 tiếng (1 ngày vs 6~8 tiếng/1 người >> 1 người có thể nhiều task,
+  tránh ngâm task từ ngày này qua ngày khác)
+**Mọi người việc cần thực hiện để hoàn thành công việc đều sẽ liệt kê trong task list để đảm bảo quản lí 100%
+  Ví dụ:
+    việc backlog = "Setup công cụ quản lí", người thực hiện = Giang (chưa biết setup)
+    tasks = [
+      tìm hiểu sơ lược + tạo tk công cụ (trello) (1 tiếng)
+      dựng khung Project trong công cụ quản lí (1/2 tiếng)
+      bổ sung quyền truy cập cho các thành viên (1/2 tiếng)
+      buffer - thời gian dự bị (1 tiếng) (xảy ra vấn đề > tìm kiếm/hỏi để tháo gỡ)
+    ]
+- Daily meeting/sprint: buổi họp hằng ngày của team
+  Yêu cầu: ngắn (15'), trực tiếp, cập nhật
+  Output: tiến độ hiện tại + dự đoán tiến độ của từng thành viên trong team + cả team > để điều chỉnh plan nếu cần
+- Sprint review: Đánh giá cuối sprint
+  Output: các vấn đề của sprint vừa xong
+- Sprint restrospective: Tổng kết cuối sprint
+  Outout: các điều chỉnh cần có trong sprint tới
+- Product owner: người ra yêu cầu, sẽ là người bổ sung nội dung cho Product backlog
+- Scrum master: người quản lí, sẽ là người phân phối theo thứ tự ưu tiên công việc từ Product backlog
+vào Sprint backlog, liên hệ vs Product owner và Dev team
+- Dev team: đội triển khai, là người thực hiện những công việc trong Sprint backlog và báo cáo vs Scrum master
+** khi làm team phải phân vai và đảm bảo kết nối + hợp tác
+- Công cụ quản lí: nên dùng TRELLO cho dễ
+  Có thể tạo 1 bảng project với các cột
+    [Product Backlog, Sprint Backlog, Tasks - TODO, Tasks - InProgress, Tasks - Done, ... thêm tùy chỉnh]
+
+3. Triển khai, áp dụng
+** Người nắm rõ nhất về scrum trong team là Scrum master, người này cũng thường là người điều phối + giám sát công việc
+  nên việc triển khai dưới đây viết theo view của Scrum master
+3.1 Quy trình làm việc tổng quan với Scrum
+- Bắt đầu dự án
+  Thực hiện: Họp khách + team
+  Output: Product backlog + cơ cấu team + thời gian cho toàn bộ dự án
+**Mỗi đơn vị trong backlog nên = 1 công việc cụ thể (công việc này thường to ~ sau sẽ được chia nhỏ thành task khi triển khai)
+  Ví dụ Product backlog app "Bán q.áo":
+    > Setup công cụ quản lí
+    > Setup môi trường chạy thử/chạy thật
+    > Trang chủ giới thiệu shop + mặt hàng
+    > Chức năng tìm kiếm mặt hàng
+    > Trang chi tiết mặt hàng
+    > Chức năng giỏ hàng + mua hàng
+    > Trang giới thiệu thông tin
+    > Tài liệu quản lí
+- Vào vòng lặp các Sprint
+- [Sprint] Sprint planning
+  Thực hiện: nhặt công việc cần làm từ Product backlog + Sprint backlog sprint trước (nếu còn tồn)
+  Output: Sprint backlog + bản breakdown công việc từ sprint backlog thành Tasks list
+  Ví dụ: Sprint backlog cho sprint 1
+    > Setup công cụ quản lí (SB1)
+    > Setup môi trường chạy thử/chạy thật (SB2)
+    > Trang chủ giới thiệu shop + mặt hàng (SB3)
+  Ví dụ Tasks list cho sprint 1
+    > (SB1) ...
+    > (SB1) ...
+    > (SB1) ...
+    > (SB2) ...
+    > (SB3) ...
+- [Sprint] Triển khai sprint
+- Vào vòng lặp Daily sprint
+- [Daily sprint] - [Sáng sớm]
+  Họp Daily vs 3 câu hỏi cho mọi Người
+    - Hôm qua đã làm gì?
+    - Lúc làm gặp vấn đề gì ko?
+    - Hôm nay sẽ làm gì?
+  Output:
+    Tasks được phân chia cho cả team + nắm được hôm nay cả team mỗi người làm những gì
+- [Daily sprint] - [Sáng + chiều]
+  Làm task
+- [Sprint] Sprint review
+- [Sprint] Sprint restrospective
+- Bàn giao + kết thúc dự án
+

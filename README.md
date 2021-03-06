@@ -31,16 +31,14 @@ Firebase
 ![story](https://user-images.githubusercontent.com/30485720/110193739-64562d80-7e68-11eb-8baa-791286dcb7fa.PNG)
 </details>
 - Header, Sidebar, Story no need for any function
-
-<br/><br/>
+<br/>
 
 <details><summary>POST</summary>
 ![MessageSender](https://user-images.githubusercontent.com/30485720/110193751-7041ef80-7e68-11eb-80f2-a7a8b4a3ae87.PNG=400x400)<br/>
 ![Post](https://user-images.githubusercontent.com/30485720/110193755-71731c80-7e68-11eb-824b-14347ee6d7e6.PNG=400x400)
 </details>
 - MessageSender and Post works in local host no need for database
-
-<br /><br />
+<br />
 
 <details><summary>PROFILE PAGE</summary>
 ![ProfilePageHeader](https://user-images.githubusercontent.com/30485720/110193775-923b7200-7e68-11eb-8d81-baead3c3a6ac.PNG=400x400)<br/>
@@ -48,11 +46,14 @@ Firebase
 
 - It just needs to look like that
 - The post bar is Main Page post bar -> will be added later
-<br /><br />
+<br />
 ### `Facebook 2.0: ADD FUNCTION`
 - Post works with Database
 - Story can be clicked (optional)
 - Profile Image can be updated
+
+<br />
+<br />
 
 If deadline comes and we have to rush 
 <details><summary>REFERENCE</summary>

@@ -47,6 +47,7 @@ Firebase
 - It just needs to look like that
 - The post bar is Main Page post bar -> will be added later
 <br />
+
 ### `Facebook 2.0: ADD FUNCTION`
 - Post works with Database
 - Story can be clicked (optional)

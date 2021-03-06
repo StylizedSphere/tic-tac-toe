@@ -30,8 +30,11 @@ Firebase
 # VERSION: 1.0 and 2.0
 ### `Facebook 1.0: FACEBOOK CSS-SIDE`
 ![Header](https://user-images.githubusercontent.com/30485720/110193703-16412a00-7e68-11eb-90f6-f82fc13015d9.PNG)
+Header
 ![Sidebar](https://user-images.githubusercontent.com/30485720/110193733-50123080-7e68-11eb-8bf1-369cc23d74ea.PNG)
+Sidebar
 ![story](https://user-images.githubusercontent.com/30485720/110193739-64562d80-7e68-11eb-8baa-791286dcb7fa.PNG)
+Story
 - Header, Sidebar, Story no need for any function
 
 

@@ -4,10 +4,10 @@
 ### `npm install @material-ui/core`
 ### `npm start`
 
-**Material**
+**Material** <br/>
 https://material-ui.com/components/material-icons/#api
 
-**Tech Used**
+**Tech Used** <br/>
 React + React HOOKS
 REDUX pattern
 Material UI

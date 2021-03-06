@@ -51,7 +51,7 @@ Firebase
 ### `Facebook 2.0: ADD FUNCTION`
 - Post works with Database
 - Story can be clicked (optional)
-- Profile Image can be updated
+- Profile Image can be updated (optional)
 
 <br />
 <br />

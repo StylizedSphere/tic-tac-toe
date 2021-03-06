@@ -15,10 +15,7 @@ Flexbox
 Firebase
 
 ## PROJECT STARTER
-<details><summary>CLICK ME</summary>
 ![image](https://user-images.githubusercontent.com/30485720/110193618-81d6c780-7e67-11eb-9866-b21401c3c73b.png)
-</details>
-
 
 ## TODO
 - Main Page: Header, Sidebar, Story: Mạnh

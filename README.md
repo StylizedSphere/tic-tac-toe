@@ -54,6 +54,8 @@ Firebase
 - Story can be clicked (optional)
 - Profile Image can be updated
 
-REFERENCE
-If deadline comes and we have to rush <br />
-https://www.youtube.com/watch?v=B-kxUMHBxNo&ab_channel=CleverProgrammer
+If deadline comes and we have to rush 
+<details><summary>REFERENCE</summary>
+  https://www.youtube.com/watch?v=B-kxUMHBxNo&ab_channel=CleverProgrammer
+</details>
+

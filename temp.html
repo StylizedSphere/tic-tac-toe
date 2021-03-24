@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporary HTML</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/chat.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="header">
+            Mindx Chat
+        </div>
+        <div class="main">
+            <div class="aside-left">
+                <div class="create-conversation">
+                    <button class="btn cursor-pointer" id="create-conversation">+ New conversation</button>
+                </div>
+                <div class="list-conversations"></div>
+            </div>
+            <div class="conversation-detail">
+                <div class="conversation-title" id="conversationTitle">New Conversation</div>
+                <div class="list-message">
+                </div>
+                <form action="" id="send-message-form" class="border-input">
+                    <div class="input-wrapper">
+                        <input type="text" class="text-wrapper" placeholder="Type a message" name="message">
+                    </div>
+                    <button type="submit"><i class="far fa-paper-plane btn-send"></i></button>
+                </form>
+            </div>
+            <div class="aside-right">
+                <div class="list-users">
+                    <div class="user-email">
+                        manhdaokhacmanh@gmail.com
+                    </div>
+                    <div class="user-email">
+                        manhdkgch18056@fpt.edu.vn
+                    </div>
+                </div>
+                <form id="add-user-form">
+                    <div class="input-wrapper">
+                        <input type="email" name="email" placeholder="Friend Email">
+                        <div class="error" id="email-error"></div>
+                    </div>
+                    <button class="btn">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <script>
+    let addConversationForm = document.getElementById('add-conversation-form')
+    let email = document.getElementById('add-conversation').value
+    addConversationForm.addEventListener('click', () => {
+        console.log('email: ' + email)
+        const url = `https://apilayer.net/api/check?access_key=5f3563107669db715cff9265853c287e&email=${email}`
+        fetch(url)
+            .then(data => {
+                return data.json()
+            })
+            .then(res => {
+                console.log(res)
+                if (res.format_valid == true) {
+                    console.log('ok')
+                }
+            })
+    })
+</script> -->
+<script src="https://kit.fontawesome.com/4a42177165.js" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,136 @@
+html, 
+body,
+#app {
+    height: 100%;
+    margin: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-item {
+    border: 1px solid black;
+    background-color: gray;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-grow-2 {
+    flex-grow: 2;
+}
+
+.flex-grow-3 {
+    flex-grow: 3;
+}
+
+.flex-grow-4 {
+    flex-grow: 4;
+}
+
+.flex-grow-5 {
+    flex-grow: 5;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+li.active {
+    color: rgb(0, 162, 255)
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.no-grow {
+    flex-grow: 0;
+}
+
+.mr-0 {
+    margin-right: 0px;
+}
+
+.card {
+    padding: 1rem;
+    border: 1px solid #ececec;
+    border-radius: 1rem;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.no-bullet {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list-item {
+    padding: 1rem 1rem;
+}
+
+.list-item.active {
+    background: blue;
+    color: #ffffff;
+    border: 1px solid #ececec;
+    box-sizing: border-box;
+}
+
+.form-inline {
+    display: flex;
+}
+
+.form-inline > .form-group {
+    margin: 5px;
+}
+
+.p-xl {
+    padding: 10px;
+}
+
+.bg-primary {
+    background-color: blue;
+    color: #ffffff;
+}
+
+.msg {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.msg-primary {
+    margin-right: 8px;
+    background-color: #0000ff;
+    color: #ffffff;
+}
+
+.msg-secondary {
+    margin-left: 8px;
+    background-color: #bbbbbb;
+    color: #000000;
+}

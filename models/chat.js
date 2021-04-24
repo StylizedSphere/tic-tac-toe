@@ -9,6 +9,7 @@ let msgListener = function(){}
 function subscribeListCon() {
     db.collection("conversations")
     .where("list_member", "array-contains", authedUser)
+    .orderBy("sent_at")
     .onSnapshot(function(snapshot) {
         const cons = snapshot.docChanges()
         cons.forEach(function(con) {
@@ -52,13 +53,15 @@ function changeActiveCon(nextConId) {
         msgListener()
         msgListener = db.collection("messages")
         .where("conversation_id", "==",activeCon)
+        .orderBy("sent_at")
         .onSnapshot(function(snapshot) {
             const msgs = snapshot.docChanges()
             msgs.forEach(function(msg) {
+                if(msg.type === "modified") return
                 const id = msg.doc.id
                 messages.push({
                     ...msg.doc.data(),
-                    id: id,    
+                    id: id, 
                 })
             })   
             notifyMessageChanges(messages)

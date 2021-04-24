@@ -1,9 +1,10 @@
-import {authedUser} from "../models/auth.js"
+import {authedUser, img} from "../models/auth.js"
 import { changeActiveCon, activeCon } from "../models/chat.js"
 function createCon(name){
     db.collection("conversations").doc().set({
         name: name,
         list_member: [authedUser],
+        sent_at: firebase.firestore.FieldValue.serverTimestamp()
     })
 }
 
@@ -22,6 +23,7 @@ function sendMsg(msg) {
         content: msg,
         sender: authedUser,
         conversation_id: activeCon,
+        sent_at: firebase.firestore.FieldValue.serverTimestamp()
     })
 }
 

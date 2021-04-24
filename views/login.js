@@ -4,23 +4,27 @@ import chatScreen from "./chat.js"
 import registerScreen from "./register.js"
 
 const loginScreen = 
-    `<form id="js-formLogin">
-    <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" required>    
+    `
+    <div class="login-bg w-100 h-100"> 
+        <div class="loginbox">
+        <img src = "avt.png" class="avatar">
+            <h1>Login</h1>
+            <form id="js-formLogin"> 
+                <p><em>Username</em></p>
+                <input type="text" placeholder="Enter Username" id="email">
+                <p><em>Password</em></p>
+                <input type="password"  placeholder="Enter Password" id="password">
+                <input type="submit"  value="Done">
+                <a id="js-btnMoveToRegister" href="">Don't have an account?</a>
+            </form>
+        </div>
     </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="password" id="password" required>           
-    </div>
-    <div>
-        <button type="submit">Login</button>
-        <button type="button" id="js-btnMoveToRegister">Move to register</button>
-    </div>
-    </form>`
+    `
 
 function onload() {
-    document.getElementById("js-btnMoveToRegister").addEventListener("click", function() {
+    const btnMoveToRegister = document.getElementById("js-btnMoveToRegister")
+    btnMoveToRegister.addEventListener("click", function(event) {
+        event.preventDefault()
         setScreen(registerScreen)
     })
     const formLogin = document.getElementById("js-formLogin")

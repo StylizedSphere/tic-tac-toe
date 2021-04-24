@@ -3,26 +3,26 @@ import loginScreen from "./login.js"
 import {register} from "../controllers/auth.js"
 
 const registerScreen = 
-    `<form id="js-formRegister">
-    <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" required>    
+    `
+    <div class="login-bg w-100 h-100">
+        <div class="signupbox">
+            <img src = "avt.png" class="avatar">
+            <h1>Sign up</h1>
+            <form id="js-formRegister"> <p><em>Gmail</em></p>
+                <input type="text" id="email">
+                <p><em>Username</em></p>
+                <input type="text">
+                <p><em>Password</em></p>
+                <input type="password" id="password">
+                <p><em>Retype Password</em></p>
+                <input type="password" id="retypePassword">
+                <button type="submit">Sign up</button>
+                <button type="button" id="js-btnMoveToLogin">Back to login</button>
+
+            </form>    
+        </div>
     </div>
-    <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" required>
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="password" id="password" required>           
-    </div>
-    <div>
-        <label for="retypePassword">Retype Password</label>
-        <input type="password" id="retypePassword" required>    
-        <button type="submit">Register</button>
-        <button type="button" id="js-btnMoveToLogin">Back to login</button>
-    </div>
-    </form>`
+    `
 
 function onload() {
     document.getElementById("js-btnMoveToLogin").addEventListener("click", function() {

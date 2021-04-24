@@ -20,9 +20,9 @@ const chatScreen = `
     <div class="d-flex flex-grow-5 column">
         <div class="bg-primary p-xl" id="js-conTitle">Conversation Name</div>
         <div class="d-flex  flex-grow-1">
-            <div class="d-flex  flex-grow-3 column">
-                <div class="d-flex  flex-grow-1">
-                    <div class="w-100" id="js-listMessage"></div>
+            <div class="d-flex flex-grow-3 column">
+                <div class="d-flex flex-grow-1">
+                    <div class="w-100 overflow" id="js-listMessage"></div>
                 </div>    
                 <form class="form-inline" style="margin: 0" id="js-formChat">      
                     <div class="form-group flex-grow-1">
@@ -85,14 +85,18 @@ function onload() {
 function onMessageChanges(messages) {
     const listMessage = document.getElementById("js-listMessage")
     listMessage.innerHTML = ""
+    listMessage.style.maxHeight = listMessage.clientHeight
+
     messages.forEach(function(msg) {
         const align = msg.sender === authedUser ? "flex-end" : "flex-start"
         const color = msg.sender === authedUser ? "msg-primary" : "msg-secondary"
-        const msgHtml = `<div class="d-flex ${align}">
-        <span class="msg ${color}">${msg.content}</span>
+        const msgHtml = `
+        <div class="d-flex ${align}">
+        <span class="msg break-word ${color}">${msg.content}</span>
         </div>`
         listMessage.insertAdjacentHTML("beforeend", msgHtml)
     })
+    listMessage.scrollTop = listMessage.scrollHeight
 }
 
 function onConsChanges(cons) {

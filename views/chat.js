@@ -1,4 +1,4 @@
-import {createCon, updateActiveCon, sendMsg} from "../controllers/chat.js"
+import {createCon, updateActiveCon, updateActiveMember, sendMsg} from "../controllers/chat.js"
 import { subscribeListCon, invite, activeCon} from "../models/chat.js"
 import {authedUser} from "../models/auth.js"
 
@@ -101,7 +101,6 @@ function onMessageChanges(messages) {
 
 function onConsChanges(cons) {
     const listCon = document.getElementById("js-listCon")
-    const conTitle = document.getElementById("js-conTitle")
     listCon.innerHTML = ""
     cons.forEach(function(con) {
         const conLi = document.createElement("li")
@@ -111,14 +110,12 @@ function onConsChanges(cons) {
 
         if (conLi.dataset.id === activeCon) {
             conLi.classList.add("active")
-            
         }
         conLi.addEventListener("click", function() {
             updateActiveCon(con.id)
         })
         listCon.appendChild(conLi)
     })
-    
 }
 
 function onActiveConChanges(con) {
@@ -134,12 +131,27 @@ function onActiveConChanges(con) {
     onActiveConUpdate(con)
 }
 
+function onActiveMemberChanges(email) {
+    const listMember = document.querySelectorAll("#js-listMember > li")
+    listMember.forEach(function(conLi) {
+        if (conLi.dataset.id !== email) {
+            conLi.classList.remove("active")
+        } else {
+            conLi.classList.add("active")
+        }
+    })
+}
+
 function updateListMember(emails) {
     const listMember = document.getElementById("js-listMember")
     listMember.innerHTML = ""
     emails.forEach(function(email) {
         const memberLi = document.createElement("li")
         memberLi.innerText = email
+        memberLi.dataset.id = email
+        memberLi.addEventListener("click", function() {
+            updateActiveMember(email)
+        })
         listMember.appendChild(memberLi)
     })
 }
@@ -156,4 +168,5 @@ export default {
     onMessageChanges: onMessageChanges,
     onActiveConChanges: onActiveConChanges,
     onActiveConUpdate: onActiveConUpdate,
+    onActiveMemberChanges: onActiveMemberChanges,
 }

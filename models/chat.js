@@ -4,6 +4,7 @@ import chatScreen from "../views/chat.js"
 let conversations = []
 let messages = []
 let activeCon = ""
+let activeMember = ""
 let msgListener = function(){}
 
 function subscribeListCon() {
@@ -38,6 +39,13 @@ function subscribeListCon() {
         })
         notifyConversationsChanges()
     })
+}
+
+function changeActiveMember(nextMember) {
+    if (nextMember !== activeMember) {
+        activeMember = nextMember
+        chatScreen.onActiveMemberChanges(nextMember)
+    }
 }
 
 function changeActiveCon(nextConId) {
@@ -90,4 +98,4 @@ function notifyMessageChanges() {
     chatScreen.onMessageChanges(messages)
 }
 
-export {subscribeListCon, changeActiveCon, invite, activeCon}
+export {subscribeListCon, changeActiveCon, changeActiveMember, invite, activeCon}

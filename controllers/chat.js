@@ -1,5 +1,5 @@
 import {authedUser, img} from "../models/auth.js"
-import { changeActiveCon, activeCon } from "../models/chat.js"
+import { changeActiveCon, changeActiveMember, activeCon } from "../models/chat.js"
 function createCon(name){
     db.collection("conversations").doc().set({
         name: name,
@@ -10,6 +10,10 @@ function createCon(name){
 
 function updateActiveCon(nextConId) {
     changeActiveCon(nextConId)
+}
+
+function updateActiveMember(nextMember) {
+    changeActiveMember(nextMember)
 }
 
 function sendMsg(msg) {
@@ -27,4 +31,4 @@ function sendMsg(msg) {
     })
 }
 
-export {createCon, updateActiveCon, sendMsg}
+export {createCon, updateActiveCon, updateActiveMember, sendMsg}

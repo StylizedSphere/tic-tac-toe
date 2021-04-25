@@ -6,6 +6,6 @@ function setScreen(screen) {
     document.getElementById("app").innerHTML = screen.content
     screen.onload()
 }
-setScreen(chatScreen)
+setScreen(loginScreen)
 
 export default setScreen;

@@ -6,7 +6,7 @@ body,
 }
 
 .login-bg {
-    background: url("bg2.jpg");
+    background: url("../img/bg2.jpg");
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
@@ -143,12 +143,6 @@ h1 {
 
 .overflow {
     overflow-y: auto;
-}
-
-.chat-bg {
-    background: rgb(185,183,169);
-    background: linear-gradient(90deg, rgba(185,183,169,1) 19%, rgba(85,85,92,0.9948354341736695) 93%);
-
 }
 
 .d-flex {

@@ -54,7 +54,9 @@ component.chat = `
         <ul class="no-bullet" id="js-listCon"></ul>
     </div>
     <div class="d-flex flex-grow-5 column">
-        <div class="bg-primary p-xl" id="js-conTitle">Conversation Name</div>
+        <div class="bg-primary p-xl" id="js-conTitle">Conversation Name
+            <button id="signout">Sign out</button>
+        </div>
         <div class="d-flex  flex-grow-1">
             <div class="d-flex flex-grow-3 column">
                 <div class="d-flex flex-grow-1">
@@ -70,7 +72,7 @@ component.chat = `
                 </form>
             </div>
             <div class="flex-grow-1 card shadow">
-                <form class="" style="margin" id="js-formInvite">      
+                <form class="" id="js-formInvite">      
                     <div class="d-flex"> 
                         <div class="d-flex  flex-grow-1">
                             <input class="w-100" type="text" id="email">
@@ -85,5 +87,4 @@ component.chat = `
         </div>
     </div>
 </div>
-
 `

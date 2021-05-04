@@ -7,9 +7,9 @@ window.onload = () => {
             // }
             if (user.emailVerified) {
                 view.setActiveScreen('chat')
-            } else {
+           } else {
                 alert('Please verify your email')
-                firebase.auth().signOut()
+                firebase.auth().signOut() 
                 view.setActiveScreen('login')
             }
         } else {

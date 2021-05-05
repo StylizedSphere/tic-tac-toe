@@ -23,6 +23,7 @@ controller.sendMsg = (msg) => {
     if (!activeCon) {
         throw new Error("You need to choose a conversation first!")
     }
+    console.log(msg)
     db.collection("messages").doc().set({
         content: msg,
         sender: authedUser,

@@ -1,10 +1,7 @@
 window.onload = () => {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
-            // model.currentUser = {
-            //   displayName: user.displayName,
-            //   email: user.email
-            // }
+            console.log(user)
             if (user.emailVerified) {
                 view.setActiveScreen('chat')
            } else {

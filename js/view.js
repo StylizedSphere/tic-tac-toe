@@ -63,6 +63,7 @@ view.setActiveScreen = (screenName) => {
             formChat.addEventListener("submit", function(event) {
                 event.preventDefault()
                 try {
+                    console.log(formChat.message.value)
                     controller.sendMsg(formChat.message.value)
                     formChat.message.value = ""
                 }catch(err) {
@@ -83,6 +84,7 @@ view.setActiveScreen = (screenName) => {
 
             document.getElementById("sign-out").addEventListener("click", () => {
                 model.init()
+                firebase.auth().signOut() 
                 view.setActiveScreen('login')
             })
             break;
@@ -158,7 +160,7 @@ view.onMessageChanges = (messages) => {
         const msgHtml = `
         <li class="${msgClass}">
             <img src="${src}" alt="" />
-            <p>${msg.content}</p>
+            <p class="break-word">${msg.content}</p>
         </li>
         `
         listMessage.insertAdjacentHTML("beforeend", msgHtml)

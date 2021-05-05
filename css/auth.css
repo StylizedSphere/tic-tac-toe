@@ -18,11 +18,11 @@
 }
 .loginbox {
     width: 30%;
-    height: 50%;
+    height: 70%;
 }
 .signupbox {
     width: 30%;
-    height: 70%;
+    height: 85%;
 }
 .container h1 {
     margin: 0;
@@ -89,4 +89,9 @@
 .no-bullet {
     list-style-type: none;
     padding-left: 0;
+}
+
+.center {
+    margin: auto;
+    width: 40%;
 }

@@ -1,41 +1,21 @@
 const component = {}
 
 component.login = `
-<div class="login-bg w-100 h-100"> 
-    <div class="loginbox">
-    <img src = "./img/avt.png" class="avatar">
-        <h1>Login</h1>
-        <form id="js-formLogin"> 
-            <p><em>Username</em></p>
-            <input type="text" placeholder="Enter Username" id="email">
-            <p><em>Password</em></p>
-            <input type="password"  placeholder="Enter Password" id="password">
-            <input type="submit"  value="Done">
-            <a id="js-btnMoveToRegister" href="">Don't have an account?</a>
-        </form>
-    </div>
+<div class="container loginbox">
+    <img src="http://emilcarlsson.se/assets/mikeross.png" class="avatar">
+    <h1>Sign in</h1>
+    <form id="js-formLogin"> 
+        <p><em>Username</em></p>
+        <input type="text" placeholder="Enter Username" id="email">
+        <p><em>Password</em></p>
+        <input type="password"  placeholder="Enter Password" id="password">
+        <input type="submit"  value="Done">
+        <a id="js-btnMoveToRegister" href="">Create an account</a>
+    </form>
 </div>
 `
 
 component.register = `
-    <div class="login-bg w-100 h-100">
-        <div class="signupbox">
-            <img src = "./img/avt.png" class="avatar">
-            <h1>Sign up</h1>
-            <form id="js-formRegister"> <p><em>Gmail</em></p>
-                <input type="text" id="email">
-                <p><em>Username</em></p>
-                <input type="text">
-                <p><em>Password</em></p>
-                <input type="password" id="password">
-                <p><em>Retype Password</em></p>
-                <input type="password" id="retypePassword">
-                <button type="submit">Sign up</button>
-                <button type="button" id="js-btnMoveToLogin">Back to login</button>
-
-            </form>    
-        </div>
-    </div>
 `
 
 component.chat = `

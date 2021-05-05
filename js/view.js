@@ -51,6 +51,7 @@ view.setActiveScreen = (screenName) => {
             break;
 
         case 'chat':
+            view.chat()
             model.subscribeListCon()
             const formCreateCon = document.getElementById("js-formCreateCon")
             formCreateCon.addEventListener("submit", function(event) {
@@ -80,25 +81,85 @@ view.setActiveScreen = (screenName) => {
                 }
             })
 
-            document.getElementById("signout").addEventListener("click", () => {
+            document.getElementById("sign-out").addEventListener("click", () => {
                 firebase.auth().signOut()
             })
             break;
     }
 }
 
+view.chat = () => {
+    $(".messages").animate({ scrollTop: $(document).height() }, "fast");
+
+        $("#profile-img").click(function() {
+            $("#status-options").toggleClass("active");
+        });
+    
+        $(".expand-button").click(function() {
+        $("#profile").toggleClass("expanded");
+            $("#contacts").toggleClass("expanded");
+        });
+    
+        $("#status-options ul li").click(function() {
+            $("#profile-img").removeClass();
+            $("#status-online").removeClass("active");
+            $("#status-away").removeClass("active");
+            $("#status-busy").removeClass("active");
+            $("#status-offline").removeClass("active");
+            $(this).addClass("active");
+            
+            if($("#status-online").hasClass("active")) {
+                $("#profile-img").addClass("online");
+            } else if ($("#status-away").hasClass("active")) {
+                $("#profile-img").addClass("away");
+            } else if ($("#status-busy").hasClass("active")) {
+                $("#profile-img").addClass("busy");
+            } else if ($("#status-offline").hasClass("active")) {
+                $("#profile-img").addClass("offline");
+            } else {
+                $("#profile-img").removeClass();
+            };
+            
+            $("#status-options").removeClass("active");
+        });
+    
+        function newMessage() {
+            message = $(".message-input input").val();
+            if($.trim(message) == '') {
+                return false;
+            }
+            $('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+            $('.message-input input').val(null);
+            $('.contact.active .preview').html('<span>You: </span>' + message);
+            $(".messages").animate({ scrollTop: $(document).height() }, "fast");
+        };
+    
+        $('.submit').click(function() {
+        newMessage();
+        });
+    
+        $(window).on('keydown', function(e) {
+        if (e.which == 13) {
+            newMessage();
+            return false;
+        }
+        });
+}
+
 view.onMessageChanges = (messages) => {
-    const listMessage = document.getElementById("js-listMessage")
+    const listMessage = document.getElementById("messages")
     listMessage.innerHTML = ""
     listMessage.style.maxHeight = listMessage.clientHeight
 
     messages.forEach(function(msg) {
-        const align = msg.sender === authedUser ? "flex-end" : "flex-start"
-        const color = msg.sender === authedUser ? "msg-primary" : "msg-secondary"
+        const msgClass = msg.sender === authedUser ? "sent" : "replies"
+        const src = msg.sender === authedUser ? "http://emilcarlsson.se/assets/mikeross.png" : "http://emilcarlsson.se/assets/harveyspecter.png"
         const msgHtml = `
-        <div class="d-flex ${align}">
-        <span class="msg break-word ${color}">${msg.content}</span>
-        </div>`
+        <li class="${msgClass}">
+            <img src="${src}" alt="" />
+            <p>${msg.content}</p>
+        </li>
+        `
         listMessage.insertAdjacentHTML("beforeend", msgHtml)
     })
     listMessage.scrollTop = listMessage.scrollHeight

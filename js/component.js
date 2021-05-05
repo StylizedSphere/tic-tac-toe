@@ -16,6 +16,21 @@ component.login = `
 `
 
 component.register = `
+<div class="container signupbox">
+    <img src = "http://emilcarlsson.se/assets/mikeross.png" class="avatar">
+    <h1>Sign up</h1>
+    <form id="js-formRegister"> <p><em>Gmail</em></p>
+        <input type="text" id="email">
+        <p><em>Username</em></p>
+        <input type="text">
+        <p><em>Password</em></p>
+        <input type="password" id="password">
+        <p><em>Retype Password</em></p>
+        <input type="password" id="retypePassword">
+        <button type="submit">Sign up</button>
+        <button type="button" id="js-btnMoveToLogin">Back to login</button>
+    </form>    
+</div>
 `
 
 component.chat = `

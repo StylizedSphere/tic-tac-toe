@@ -8,6 +8,13 @@ let activeCon = ""
 let activeMember = ""
 let msgListener = function(){}
 
+model.init = () => {
+    conversations = []
+    messages = []
+    activeCon = ""
+    activeMember = ""
+} 
+
 model.updateAuthedUser = (user) => {
     authedUser = user
 }

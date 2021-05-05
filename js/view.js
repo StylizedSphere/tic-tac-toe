@@ -82,7 +82,8 @@ view.setActiveScreen = (screenName) => {
             })
 
             document.getElementById("sign-out").addEventListener("click", () => {
-                firebase.auth().signOut()
+                model.init()
+                view.setActiveScreen('login')
             })
             break;
     }

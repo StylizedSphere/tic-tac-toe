@@ -1,8 +1,8 @@
 window.onload = () => {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
-            console.log(user)
             if (user.emailVerified) {
+                model.updateAuthedUser(user.email)
                 view.setActiveScreen('chat')
            } else {
                 alert('Please verify your email')

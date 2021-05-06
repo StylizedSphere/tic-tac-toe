@@ -85,7 +85,7 @@ component.chat = `
         </div>
 
         <div id="bottom-bar">
-            <button id="sign-out"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Sign out</span></button>
+            <button id="sign-out"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> <span>Sign out</span></button>
             <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
         </div>
     </div>
@@ -99,7 +99,7 @@ component.chat = `
                  <i class="fa fa-instagram" aria-hidden="true"></i>
             </div>
         </div>
-        <div class="messages">
+        <div class="messages" id="messagesForm">
             <ul id="messages"></ul>
         </div>
         <form class="message-input" id="js-formChat">

@@ -23,7 +23,6 @@ controller.sendMsg = (msg) => {
     if (!activeCon) {
         throw new Error("You need to choose a conversation first!")
     }
-    console.log(msg)
     db.collection("messages").doc().set({
         content: msg,
         sender: authedUser,
@@ -54,6 +53,7 @@ controller.login = async(payload) => {
     if (!loginResult.user.emailVerified) {
         throw new Error("User is not verified!")
     }
+    model.init()
     model.updateAuthedUser(loginResult.user.email)
     return true;
 }

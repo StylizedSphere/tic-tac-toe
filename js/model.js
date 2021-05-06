@@ -1,6 +1,5 @@
 const model = {}
 let authedUser = ""
-let img = "https://robohash.org/"
 
 let conversations = []
 let messages = []
